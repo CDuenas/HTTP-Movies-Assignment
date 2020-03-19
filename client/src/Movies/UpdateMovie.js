@@ -13,9 +13,7 @@ const UpdateMovie = props => {
 
 
     useEffect(() => {
-        const moviesArray = Object.values(props.movies)
-        console.log(props.movies, 'inside effect')
-        const movieToUpdate = moviesArray.find(movie => {
+        const movieToUpdate = props.movies.find(movie => {
             return `${movie.id}` === props.match.params.id
         });
 
